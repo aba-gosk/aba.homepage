@@ -5,11 +5,22 @@ function setDefaultUserId() {
   }
 }
 
+function markUnInputEles(markStr){
+  let ngEles = $('form input').filter(function(){
+    let isTarget = !this.value;
+    if(isTarget) {
+      this.placeholder = markStr;
+    }
+    return isTarget;
+  }); 
+
+  return ngEles;
+}
+
 function onClickLogin() {
 
-  let userId = document.getElementById('userId').value;
-  let pass = document.getElementById('pass').value;
-  if (!(userId && pass)) {
+  let ngEles = markUnInputEles('please input');
+  if (ngEles.length > 0) {
     showMsg('入力漏れ');
     return false;
   }

@@ -1,5 +1,23 @@
+function markUnInputEles(markStr){
+  let ngEles = $('form input').filter(function(){
+    let isTarget = !this.value;
+    if(isTarget) {
+      this.placeholder = markStr;
+    }
+    return isTarget;
+  }); 
+
+  return ngEles;
+}
+
 function onClickRegister() {
 
+  let ngEles = markUnInputEles('please input');
+  if (ngEles.length > 0) {
+    showMsg('入力漏れ');
+    return false;
+  }
+ 
   let postData = $('form').serialize();
   console.log('postData: ', postData);
 
@@ -24,7 +42,7 @@ function onClickRegister() {
 }
 
 function showMsg(data) {
-  $('#msg').html(data.msg);
+  $('#msg').html(data.msg || data);
 }
 
 function gotoLogin() {
