@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8">
   <title>Register</title>
@@ -7,6 +8,7 @@
     body {
       background-color: green;
     }
+
     div {
       text-align: center;
     }
@@ -22,25 +24,30 @@
   </style>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
 </head>
-<body>
-<form>
-  <div>
-    <table style="width:100%">
-      <tr>
-        <td>userID:</td>
-        <td><input name="userID"></td>
-      </tr>
-      <tr>
-        <td>pass:</td>
-        <td><input type="password" name="pass"></td>
-      </tr>
-    </table>
-    <button onclick="return onClickRegester()">Register</button>
-    <br>
-    <lable id="msg"></lable>
-  </div>
-</form>
-<script type="text/javascript" src="register.js"></script>
-</body>
-</html>
 
+<body>
+  <form>
+    <div>
+      <table style="width:100%">
+        <tr>
+          <td>userId:</td>
+          <td><input name="userId" id="userId"></td>
+        </tr>
+        <tr>
+          <td>pass:</td>
+          <td><input type="password" id="pass" name="pass"></td>
+        </tr>
+      </table>
+      <button onclick="return onClickLogin()">Login</button>
+      <br>
+      <lable id="msg" style=" color: red;"></lable>
+    </div>
+  </form>
+
+</body>
+<script type="text/javascript" src="login.js"></script>
+<script type="text/javascript">
+  setDefaultUserId();
+</script>
+
+</html>
