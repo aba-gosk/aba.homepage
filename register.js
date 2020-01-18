@@ -1,11 +1,16 @@
-function onClickRegester() {
+function onClickRegister() {
+
+  let postData = $('form').serialize();
+  console.log('postData: ', postData);
 
   $.ajax({
     url: './register',
     type: 'GET',
     dataType: 'JSON',
-    data: $('form').serialize(),
+    data: postData,
   }).done((data, textStatus) => {
+    console.log('response: ', data);
+
     if (data.success) {
       doSubmit(data);
     } else {
