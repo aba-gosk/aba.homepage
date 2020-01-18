@@ -25,6 +25,7 @@
 <body>
 <form>
   <div>
+    <label>全項目必須</label>
     <table style="width:100%">
       <tr>
         <td>userID:</td>
@@ -36,7 +37,14 @@
       </tr>
       <tr>
         <td>sex:</td>
-        <td><input name="sex"></td>
+        <td>
+          <label>
+            <input type="radio" name="sex" value="1" checked>M
+          </label>
+          <label>
+            <input type="radio" name="sex" value="2">F
+          </label>
+        </td>
       </tr>
       <tr>
         <td>adress:</td>
@@ -48,7 +56,12 @@
       </tr>
       <tr>
         <td>role:</td>
-        <td><input name="role"></td>
+        <td>
+          <select name="role">
+            <option value='10'>医护人员</option>
+            <option value='20' disabled>患者</option>
+          </select>
+        </td>
       </tr>
       <tr>
         <td>pass:</td>
