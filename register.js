@@ -12,7 +12,7 @@ function onClickRegister() {
     console.log('response: ', data);
 
     if (data.success) {
-      doSubmit(data);
+      gotoLogin();
     } else {
       showMsg(data);
     }
@@ -27,8 +27,9 @@ function showMsg(data) {
   $('#msg').html(data.msg);
 }
 
-function doSubmit(data) {
-  window.location.href = 'top.html';
+function gotoLogin() {
+  let userId = document.getElementById('userId').value;
+  window.location.href = 'login.html' + '?userId='+userId;
   //to log in page
 }
 
