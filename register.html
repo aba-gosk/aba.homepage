@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8">
   <title>Register</title>
@@ -7,6 +8,7 @@
     body {
       background-color: green;
     }
+
     div {
       text-align: center;
     }
@@ -22,57 +24,60 @@
   </style>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
 </head>
+
 <body>
-<form>
-  <div>
-    <label>全項目必須</label>
-    <table style="width:100%">
-      <tr>
-        <td>userId:</td>
-        <td><input name="userId" id="userId"></td>
-      </tr>
-      <tr>
-        <td>name:</td>
-        <td><input name="name"></td>
-      </tr>
-      <tr>
-        <td>sex:</td>
-        <td>
-          <label>
-            <input type="radio" name="sex" value="1" checked>M
-          </label>
-          <label>
-            <input type="radio" name="sex" value="2">F
-          </label>
-        </td>
-      </tr>
-      <tr>
-        <td>adress:</td>
-        <td><input name="adress"></td>
-      </tr>
-      <tr>
-        <td>phone:</td>
-        <td><input name="phone"></td>
-      </tr>
-      <tr>
-        <td>role:</td>
-        <td>
-          <select name="role">
-            <option value='10'>医护人员</option>
-            <option value='20' disabled>患者</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>pass:</td>
-        <td><input type="password" name="pass"></td>
-      </tr>
-    </table>
-    <button onclick="return onClickRegister()">Register</button>
-    <br>
-    <lable id="msg" style=" color: red;"></lable>
-  </div>
-</form>
-<script type="text/javascript" src="register.js"></script>
+  <form>
+    <div style="text-align: center;">
+      <label>全項目必須</label>
+      <table style="width:100%">
+        <tr>
+          <td>userId:</td>
+          <td><input name="userId" id="userId"></td>
+        </tr>
+        <tr>
+          <td>name:</td>
+          <td><input name="name"></td>
+        </tr>
+        <tr>
+          <td>sex:</td>
+          <td>
+            <label>
+              <input type="radio" name="sex" value="1" checked>M
+            </label>
+            <label>
+              <input type="radio" name="sex" value="2">F
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>adress:</td>
+          <td><input name="adress"></td>
+        </tr>
+        <tr>
+          <td>phone:</td>
+          <td><input name="phone"></td>
+        </tr>
+        <tr>
+          <td>role:</td>
+          <td>
+            <select name="role">
+              <option value='10'>医护人员</option>
+              <option value='20' disabled>患者</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>pass:</td>
+          <td><input type="password" name="pass"></td>
+        </tr>
+      </table>
+      <button onclick="return onClickRegister()">Register</button>
+      <br>
+      <lable id="msg" style=" color: red;"></lable>
+    </div>
+  </form>
+
+  <script type="text/javascript" src="register.js"></script>
 </body>
+
 </html>
